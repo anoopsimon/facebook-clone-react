@@ -1,0 +1,132 @@
+{
+    "port": 3001,
+    "protocol": "http",
+    "stubs": [
+      {
+        "responses": [
+          {
+            "is": {
+              "statusCode": 201,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+                "Access-Control-Allow-Headers": "Content-Type"
+              }
+            }
+          }
+        ],
+        "predicates": [
+          {
+            "and": [
+              {
+                "exists": {
+                  "method": true
+                }
+              },
+              {
+                "equals": {
+                  "method": "POST"
+                }
+              },
+              {
+                "exists": {
+                  "path": true
+                }
+              },
+              {
+                "equals": {
+                  "path": "/create-customer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+                "Access-Control-Allow-Headers": "Content-Type"
+              },
+              "body": "{ \"customer\": \"Auto\" }"
+            }
+          }
+        ],
+        "predicates": [
+          {
+            "and": [
+              {
+                "exists": {
+                  "method": true
+                }
+              },
+              {
+                "equals": {
+                  "method": "GET"
+                }
+              },
+              {
+                "exists": {
+                  "query": {
+                    "customerId": true
+                  }
+                }
+              },
+              {
+                "deepEquals": {
+                  "query": {
+                    "customerId": "123"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+                "Access-Control-Allow-Headers": "Content-Type"
+              }
+            }
+          }
+        ],
+        "predicates": [
+          {
+            "and": [
+              {
+                "exists": {
+                  "method": true
+                }
+              },
+              {
+                "equals": {
+                  "method": "PUT"
+                }
+              },
+              {
+                "exists": {
+                  "path": true
+                }
+              },
+              {
+                "equals": {
+                  "path": "/update-customer"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
