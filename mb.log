@@ -1,3 +1,7 @@
-{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2023-08-25T04:59:32.727Z"}
-{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2023-08-25T04:59:32.897Z"}
-{"level":"info","message":"[http:3001] Open for business...","timestamp":"2023-08-25T04:59:32.916Z"}
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2023-08-25T10:00:38.022Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2023-08-25T10:00:38.160Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2023-08-25T10:00:38.176Z"}
+{"level":"info","message":"[http:3001] ::1:53989 => GET /feed","timestamp":"2023-08-25T10:00:48.250Z"}
+{"level":"info","message":"[http:3001] ::1:53990 => GET /feed","timestamp":"2023-08-25T10:00:48.268Z"}
+{"level":"info","message":"[http:3001] ::1:54000 => GET /feed","timestamp":"2023-08-25T10:00:49.900Z"}
+{"level":"info","message":"[http:3001] ::1:54001 => GET /feed","timestamp":"2023-08-25T10:00:49.911Z"}

@@ -1,132 +1,47 @@
 {
-    "port": 3001,
-    "protocol": "http",
-    "stubs": [
-      {
-        "responses": [
-          {
-            "is": {
-              "statusCode": 201,
-              "headers": {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-                "Access-Control-Allow-Headers": "Content-Type"
-              }
+  "port": 3001,
+  "protocol":"http",
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*" 
+
+            },
+            "body": {
+              "feed": [
+                {
+                  "id": 1,
+                  "text": "This is a sample post on Facebook-like feed.",
+                  "image": "https://example.com/image1.jpg",
+                  "comments": [
+                    {
+                      "id": 101,
+                      "text": "Nice post!"
+                    },
+                    {
+                      "id": 102,
+                      "text": "I love it!"
+                    }
+                  ],
+                  "likes": 10
+                },
+                {
+                  "id": 2,
+                  "text": "Another post in the feed.",
+                  "image": "https://example.com/image2.jpg",
+                  "comments": [],
+                  "likes": 5
+                }
+              ]
             }
           }
-        ],
-        "predicates": [
-          {
-            "and": [
-              {
-                "exists": {
-                  "method": true
-                }
-              },
-              {
-                "equals": {
-                  "method": "POST"
-                }
-              },
-              {
-                "exists": {
-                  "path": true
-                }
-              },
-              {
-                "equals": {
-                  "path": "/create-customer"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "responses": [
-          {
-            "is": {
-              "statusCode": 200,
-              "headers": {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-                "Access-Control-Allow-Headers": "Content-Type"
-              },
-              "body": "{ \"customer\": \"Auto\" }"
-            }
-          }
-        ],
-        "predicates": [
-          {
-            "and": [
-              {
-                "exists": {
-                  "method": true
-                }
-              },
-              {
-                "equals": {
-                  "method": "GET"
-                }
-              },
-              {
-                "exists": {
-                  "query": {
-                    "customerId": true
-                  }
-                }
-              },
-              {
-                "deepEquals": {
-                  "query": {
-                    "customerId": "123"
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "responses": [
-          {
-            "is": {
-              "statusCode": 200,
-              "headers": {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-                "Access-Control-Allow-Headers": "Content-Type"
-              }
-            }
-          }
-        ],
-        "predicates": [
-          {
-            "and": [
-              {
-                "exists": {
-                  "method": true
-                }
-              },
-              {
-                "equals": {
-                  "method": "PUT"
-                }
-              },
-              {
-                "exists": {
-                  "path": true
-                }
-              },
-              {
-                "equals": {
-                  "path": "/update-customer"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+        }
+      ]
+    }
+  ]
+}
