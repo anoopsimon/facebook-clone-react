@@ -17,7 +17,7 @@
                 {
                   "id": 1,
                   "text": "This is a sample post on Facebook-like feed.",
-                  "image": "https://example.com/image1.jpg",
+                  "image": "https://plus.unsplash.com/premium_photo-1661504800337-17923a04bb77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80",
                   "comments": [
                     {
                       "id": 101,
@@ -33,7 +33,7 @@
                 {
                   "id": 2,
                   "text": "Another post in the feed.",
-                  "image": "https://example.com/image2.jpg",
+                  "image": "https://images.unsplash.com/photo-1497321697169-1ca9f1c8a253?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80",
                   "comments": [],
                   "likes": 5
                 }

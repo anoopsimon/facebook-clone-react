@@ -40,9 +40,6 @@ const PostText = styled.p`
   font-size: 1.2rem;
 `;
 
-const Comments = styled.div`
-  margin-top: 10px;
-`;
 
 const Comment = styled.div`
   margin-top: 5px;
@@ -50,10 +47,31 @@ const Comment = styled.div`
   color: #666;
 `;
 
-const Likes = styled.div`
+
+const LikesAndComments = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
+`;
+
+const Likes = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 1rem;
   color: #666;
+  cursor: pointer;
+`;
+
+const Comments = styled.div`
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+`;
+
+const CommentsWrapper = styled.div`
+  margin-top: 10px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
 `;
 
 function App() {
@@ -81,12 +99,15 @@ function App() {
           <Post key={post.id}>
             <PostText>{post.text}</PostText>
             {post.image && <PostImage src={post.image} alt={`Post ${post.id}`} />}
-            <Likes>Likes: {post.likes}</Likes>
-            <Comments>
+            <LikesAndComments>
+              <Likes>Likes: {post.likes}</Likes>
+              <Comments>Comments: {post.comments.length}</Comments>
+            </LikesAndComments>
+            <CommentsWrapper>
               {post.comments.map(comment => (
                 <Comment key={comment.id}>{comment.text}</Comment>
               ))}
-            </Comments>
+            </CommentsWrapper>
           </Post>
         ))}
       </Feed>
@@ -95,4 +116,3 @@ function App() {
 }
 
 export default App;
-  

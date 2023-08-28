@@ -1,26 +1,8 @@
-{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2023-08-25T09:49:10.998Z"}
-{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2023-08-25T09:49:11.198Z"}
-{"level":"info","message":"[http:3001] Open for business...","timestamp":"2023-08-25T09:49:11.221Z"}
-{"level":"info","message":"[http:3001] ::1:53386 => GET /feed","timestamp":"2023-08-25T09:49:21.313Z"}
-{"level":"info","message":"[http:3001] ::1:53387 => GET /feed","timestamp":"2023-08-25T09:49:21.335Z"}
-{"level":"info","message":"[http:3001] ::1:53397 => GET /feed","timestamp":"2023-08-25T09:49:23.570Z"}
-{"level":"info","message":"[http:3001] ::1:53398 => GET /feed","timestamp":"2023-08-25T09:49:23.577Z"}
-{"level":"info","message":"[http:3001] ::1:53402 => GET /feed","timestamp":"2023-08-25T09:49:26.168Z"}
-{"level":"info","message":"[http:3001] ::1:53403 => GET /feed","timestamp":"2023-08-25T09:49:26.178Z"}
-{"level":"info","message":"[http:3001] ::1:53496 => GET /feed","timestamp":"2023-08-25T09:51:10.035Z"}
-{"level":"info","message":"[http:3001] ::1:53497 => GET /feed","timestamp":"2023-08-25T09:51:10.044Z"}
-{"level":"info","message":"[http:3001] ::1:53576 => GET /feed","timestamp":"2023-08-25T09:52:39.792Z"}
-{"level":"info","message":"[http:3001] ::1:53577 => GET /feed","timestamp":"2023-08-25T09:52:39.797Z"}
-{"level":"info","message":"[http:3001] ::1:53588 => GET /feed","timestamp":"2023-08-25T09:52:46.287Z"}
-{"level":"info","message":"[http:3001] ::1:53589 => GET /feed","timestamp":"2023-08-25T09:52:46.293Z"}
-{"level":"info","message":"[http:3001] ::1:53671 => GET /feed","timestamp":"2023-08-25T09:55:06.202Z"}
-{"level":"info","message":"[http:3001] ::1:53729 => GET /feed","timestamp":"2023-08-25T09:56:21.842Z"}
-{"level":"info","message":"[http:3001] ::1:53730 => GET /feed","timestamp":"2023-08-25T09:56:21.856Z"}
-{"level":"info","message":"[http:3001] ::1:53735 => GET /feed","timestamp":"2023-08-25T09:56:26.405Z"}
-{"level":"info","message":"[http:3001] ::1:53736 => GET /feed","timestamp":"2023-08-25T09:56:26.415Z"}
-{"level":"info","message":"[http:3001] ::1:53745 => GET /feed","timestamp":"2023-08-25T09:56:32.417Z"}
-{"level":"info","message":"[http:3001] ::1:53855 => GET /feed","timestamp":"2023-08-25T09:58:54.336Z"}
-{"level":"info","message":"[http:3001] ::1:53856 => GET /feed","timestamp":"2023-08-25T09:58:54.343Z"}
-{"level":"info","message":"[http:3001] ::1:53947 => GET /feed","timestamp":"2023-08-25T10:00:23.779Z"}
-{"level":"info","message":"[http:3001] ::1:53948 => GET /feed","timestamp":"2023-08-25T10:00:23.785Z"}
-{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2023-08-25T10:00:27.973Z"}
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2023-08-26T02:47:23.746Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2023-08-26T02:47:23.958Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2023-08-26T02:47:23.988Z"}
+{"level":"info","message":"[http:3001] ::1:52666 => GET /feed","timestamp":"2023-08-26T02:47:41.355Z"}
+{"level":"info","message":"[http:3001] ::1:52668 => GET /feed","timestamp":"2023-08-26T02:47:41.382Z"}
+{"level":"info","message":"[http:3001] ::1:53513 => GET /feed","timestamp":"2023-08-26T02:49:57.032Z"}
+{"level":"info","message":"[http:3001] ::1:53514 => GET /feed","timestamp":"2023-08-26T02:49:57.048Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2023-08-26T02:50:01.187Z"}
