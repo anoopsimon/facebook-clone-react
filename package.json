@@ -23,11 +23,12 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start-mock": "mb --configfile mock-service.json",
+    "start-mock": "mb --configfile mountebank/mock-service.json",
     "start-app": "react-scripts start",
     "startboth": "concurrently \"npm run start-mock\" \"npm run start-app\""
   },
   "eslintConfig": {
+    
     "extends": [
       "react-app",
       "react-app/jest"
