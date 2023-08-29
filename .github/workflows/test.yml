@@ -20,17 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd path/to/react/app
-          npm install
-          cd path/to/mountebank
+          cd mountebank
           npm install
           
-      - name: Start Mountebank
+      - name: Start App
         run: |
-          cd path/to/mountebank
-          npm run start-mock
-
-      - name: Start React app
-        run: |
-          cd path/to/react/app
-          npm start
+          cd mountebank
+          npm run start-boath
