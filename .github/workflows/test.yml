@@ -22,12 +22,7 @@ jobs:
         run: |
           cd mountebank
           npm install
-          
-      - name: Start App
-        run: |
-          cd mountebank
-          npm run startboth
-
+  
       - name: Run Unit tests
         run: |
           cd mountebank
