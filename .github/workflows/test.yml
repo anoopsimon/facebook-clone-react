@@ -26,4 +26,9 @@ jobs:
       - name: Start App
         run: |
           cd mountebank
-          npm run start-boath
+          npm run startboth
+
+      - name: Run Unit tests
+        run: |
+          cd mountebank
+          npm run test
