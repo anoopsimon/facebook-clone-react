@@ -19,11 +19,21 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: |
-          cd mountebank
-          npm install
-  
+        run: npm install
+
       - name: Run Unit tests
+        id: unit-tests
+        run: npm test
+
+      - name: Publish test results
+        if: ${{ always() }}
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          check_name: Unit Test Results
+          files: test-results/**/*.xml
+
+      - name: Update README with test results
+        if: ${{ always() }}
         run: |
-          cd mountebank
-          npm run test
+          echo "## Test Results" >> README.md
+          echo "Unit Test Results: [Check the workflow run for details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> README.md
