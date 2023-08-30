@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --reporters=jest-html-reporters",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -28,7 +28,6 @@
     "startboth": "concurrently \"npm run start-mock\" \"npm run start-app\""
   },
   "eslintConfig": {
-    
     "extends": [
       "react-app",
       "react-app/jest"
@@ -48,6 +47,8 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.1",
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.0.0",
+    "jest-html-reporters": "^3.1.4",
+    "jest-junit": "^16.0.0"
   }
 }
