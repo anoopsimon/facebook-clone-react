@@ -96,16 +96,18 @@ function App() {
       <Header>Facebook</Header>
       <Feed>
         {feedData.map(post => (
-          <Post key={post.id}>
-            <PostText>{post.text}</PostText>
-            {post.image && <PostImage src={post.image} alt={`Post ${post.id}`} />}
-            <LikesAndComments>
-              <Likes>Likes: {post.likes}</Likes>
-              <Comments>Comments: {post.comments.length}</Comments>
+            <Post key={post.id} id="post">
+              <PostText data-testid="post-text">{post.text}</PostText>
+            {post.image && <PostImage src={post.image} alt={`Post ${post.id}`} data-testid="post-image" />}
+            <LikesAndComments data-testid="like-and-comment-section">
+              <Likes data-testid="like-count">Likes: {post.likes}</Likes>
+              <Comments data-testid="comment-count">Comments: {post.comments.length}</Comments>
             </LikesAndComments>
             <CommentsWrapper>
               {post.comments.map(comment => (
-                <Comment key={comment.id}>{comment.text}</Comment>
+                <Comment key={comment.id} data-testid="comment">
+                  <CommentText data-testid="comment-text">{comment.text}</CommentText>
+                </Comment>
               ))}
             </CommentsWrapper>
           </Post>
@@ -116,3 +118,5 @@ function App() {
 }
 
 export default App;
+
+
