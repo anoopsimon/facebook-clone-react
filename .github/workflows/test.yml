@@ -25,12 +25,12 @@ jobs:
         id: unit-tests
         run: npm test
 
-      - name: Publish test results
-        if: ${{ always() }}
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        with:
-          check_name: Unit Test Results
-          files: "*.html"
+      - name: Publish HTML files
+  if: ${{ always() }}
+  uses: actions/upload-artifact@v2
+  with:
+    name: html-artifact
+    path: "*.html"
 
       - name: Update README with test results
         if: ${{ always() }}
