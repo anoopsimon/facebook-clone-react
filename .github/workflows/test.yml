@@ -30,7 +30,7 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1
         with:
           check_name: Unit Test Results
-          files: test-results/**/*.xml
+          files: *.html
 
       - name: Update README with test results
         if: ${{ always() }}
