@@ -33,7 +33,8 @@ jobs:
           path: "*.html"
           
       - name: Generate Dynamic Content
-        run: echo "GitHub Run ID: ${{ github.run_id }}" > dynamic_content.txt
+        run: |
+          echo "GitHub Run ID: ${{ github.run_id }}" > dynamic_content.txt
 
       - name: Update README with Dynamic Content
         run: |
