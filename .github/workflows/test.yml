@@ -42,8 +42,11 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config user.name "Your Name"
-          git config user.email "your.email@example.com"
-          git add .
-          git commit -m "Update README with dynamic content"
-          git push
+            git config user.name "Your Name"
+            git config user.email "your.email@example.com"
+            git remote set-url origin "https://$GITHUB_ACTOR:${{ secrets.YOUR_PAT_SECRET }}@github.com/${{ github.repository }}.git"
+            git add README.md
+            git commit -m "Update README with dynamic content"
+            git push
+        env:
+            GITHUB_ACTOR: ${{ github.actor }}
