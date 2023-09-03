@@ -33,7 +33,7 @@ jobs:
           path: "*.html"
 
       - name: Update README with test results
-          if: ${{ always() }}
-            run: |
-              echo "## Test Results" >> README.md
-              echo "Unit Test Results: [Check the workflow run for details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> README.md
+        if: ${{ always() }}
+        run: |
+          echo "## Test Results" >> README.md
+          echo "Unit Test Results: [Check the workflow run for details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> README.md
