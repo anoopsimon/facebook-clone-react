@@ -26,14 +26,14 @@ jobs:
         run: npm test
 
       - name: Publish HTML files
-  if: ${{ always() }}
-  uses: actions/upload-artifact@v2
-  with:
-    name: html-artifact
-    path: "*.html"
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-artifact
+          path: "*.html"
 
       - name: Update README with test results
-        if: ${{ always() }}
-        run: |
-          echo "## Test Results" >> README.md
-          echo "Unit Test Results: [Check the workflow run for details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> README.md
+          if: ${{ always() }}
+            run: |
+              echo "## Test Results" >> README.md
+              echo "Unit Test Results: [Check the workflow run for details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> README.md
