@@ -31,6 +31,13 @@ jobs:
         with:
           name: html-artifact
           path: "*.html"
+          
+      - name: Generate Dynamic Content
+        run: echo "GitHub Run ID: ${{ github.run_id }}" > dynamic_content.txt
+
+        - name: Update README with Dynamic Content
+        run: |
+            sed -i 's|<INSERT_DYNAMIC_CONTENT_HERE>|'"$(cat dynamic_content.txt)"'|' README.md
 
       - name: Update README with test results
         if: ${{ always() }}
